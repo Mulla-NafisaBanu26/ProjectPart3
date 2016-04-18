@@ -12,7 +12,7 @@ var objects;
         // CONSTRUCTOR METHOD +++++++++++++++++++++++++
         function life() {
             _super.call(this, "life");
-            this._speed.y = 0.7; //life speed
+            this._speed.y = 5; //life speed
             this._reset(this._topBounds);
             this.name = "life";
             this.soundString = "yay";
@@ -37,8 +37,7 @@ var objects;
             this._checkBounds(this._bottomBounds);
         };
         return life;
-    }(objects.GameObject));
+    })(objects.GameObject);
     objects.life = life;
 })(objects || (objects = {}));
-
 //# sourceMappingURL=life.js.map

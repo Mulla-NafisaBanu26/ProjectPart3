@@ -12,7 +12,6 @@
 /// <reference path="../objects/island.ts"/>
 /// <reference path="../objects/cloud.ts"/>
 /// <reference path="../objects/player.ts" />
-/// <reference path="../objects/SL2.ts" />
 
 /// <reference path="../managers/collision.ts" />
 

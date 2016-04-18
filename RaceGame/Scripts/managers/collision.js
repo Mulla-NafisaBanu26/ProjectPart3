@@ -11,7 +11,7 @@ var managers;
         Collision.prototype.check = function (object) {
             var startPoint = new createjs.Point();
             var endPoint = new createjs.Point();
-            var playerHalfHeight = this._player.height *0.5;
+            var playerHalfHeight = this._player.height * 0.5;
             var objectHalfHeight = object.height * 0.5;
             var minimumDistance = playerHalfHeight + objectHalfHeight;
             startPoint.x = this._player.x;
@@ -23,7 +23,7 @@ var managers;
             if (object.name === "stone") {
                 var x = 10;
             }
-             
+
 
             if (this.distance(startPoint, endPoint) < minimumDistance) {
                 if (!object.isColliding) {
@@ -35,8 +35,7 @@ var managers;
                         createjs.Sound.play("yay");
                         scoreValue += 100; //award 100 points
                     }
-                    if (scoreValue == 500 || scoreValue == 900)
-                    {
+                    if (scoreValue == 500 || scoreValue == 900) {
                         this._player.engineSound.stop();
                         scene = config.Scene.NEXTLEVEL;
                         changeScene();

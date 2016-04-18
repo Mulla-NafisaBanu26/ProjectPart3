@@ -35,7 +35,7 @@ var objects;
         Cloud.prototype.update = function () {
             // scroll the cloud down the screen
             this.y += this._speed.y;
-           // this.x += this._speed.x;
+            // this.x += this._speed.x;
             this._checkBounds(this._bottomBounds);
         };
         return Cloud;

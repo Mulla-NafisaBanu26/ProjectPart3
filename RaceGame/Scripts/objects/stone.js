@@ -37,8 +37,7 @@ var objects;
             this._checkBounds(this._bottomBounds);
         };
         return stone;
-    }(objects.GameObject));
+    })(objects.GameObject);
     objects.stone = stone;
 })(objects || (objects = {}));
-
 //# sourceMappingURL=stone.js.map

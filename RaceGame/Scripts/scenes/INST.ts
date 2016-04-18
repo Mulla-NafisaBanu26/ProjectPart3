@@ -1,17 +1,20 @@
-// SL2 SCENE
+// INST SCENE
 module scenes {
-    export class SL2 extends objects.Scene {
+    export class INST extends objects.Scene {
         //PRIVATE INSTANCE VARIABLES ++++++++++++
         private _ocean: objects.Ocean;
         private _island: objects.Island;
-		  private _stone: objects.stone;
         private _clouds: objects.Cloud[];
         private _cloudCount:number;
         private _player: objects.Player;
         private _collision: managers.Collision;
         private _livesLabel: objects.Label;
         private _scoreLabel: objects.Label;
-         private _Level: objects.Label;
+         private _Level2BTN: objects.Button;
+		 private _LEVELSTART: objects.Label;
+		 private  _second:number;
+		     private _BACKBTN: objects.Button;
+		  private _INST: objects.Label;
         // CONSTRUCTOR ++++++++++++++++++++++
         constructor() {
             super();
@@ -27,7 +30,7 @@ module scenes {
         private _updateScore():void {
             this._livesLabel.text = "Lives: " + livesValue;
             this._scoreLabel.text = "Score: " + scoreValue;
-			 this._Level.text =" :" +  2;
+			
         }
         
         // PUBLIC METHODS +++++++++++++++++++++
@@ -36,9 +39,7 @@ module scenes {
         public start(): void {
             // Set Cloud Count
             this._cloudCount = 3;
-            livesValue = 5;
-            scoreValue = 0;
-            
+             this._second = 0;      
             // Instantiate Cloud array
             this._clouds = new Array<objects.Cloud>();
                 
@@ -87,8 +88,9 @@ module scenes {
         
         
 
-        // SL2 Scene updates here
+        // INST Scene updates here
         public update(): void {
+
             this._ocean.update();
             this._island.update();
            
